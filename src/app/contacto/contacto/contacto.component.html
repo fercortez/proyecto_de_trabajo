@@ -1,1 +1,15 @@
 <p>contacto works!</p>
+<!--<form>
+<label for ="nombre">nombre:</label>
+<input id="nombre" [(ngModel)]="usuario.nombre" name="nombre" required>
+
+<button [disabled]="!usuario.nombre">Enviar</button>
+</form> -->
+
+<from [formGroup]="miFormulario">
+    <label for="email" formControlName="email"></label>
+    <imput id="email" formControlName="email">
+        <button [disabled]="miFormulario.invalid">Enviar</button>
+</from>
+
+
