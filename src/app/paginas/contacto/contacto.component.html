@@ -1,3 +1,4 @@
+
 <p>contacto works!</p>
 <!--<form>
 <label for ="nombre">nombre:</label>
@@ -5,11 +6,8 @@
 
 <button [disabled]="!usuario.nombre">Enviar</button>
 </form> -->
-
-<from [formGroup]="miFormulario">
-    <label for="email" formControlName="email"></label>
-    <imput id="email" formControlName="email">
+<form  [formGroup]="miFormulario">
+    <label for="email">email</label>
+    <input id="email" formControlName="email">
         <button [disabled]="miFormulario.invalid">Enviar</button>
-</from>
-
-
+    </form>

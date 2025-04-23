@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import {FormGroup,FormControl, FormsModule} from '@angular/forms';
+import {FormGroup,FormControl, FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @Component({
   selector: 'app-contacto',
-  imports: [FormsModule],
+  imports: [ReactiveFormsModule,FormsModule],
+  standalone: true,
   templateUrl: './contacto.component.html',
   styleUrl: './contacto.component.css'
 })
