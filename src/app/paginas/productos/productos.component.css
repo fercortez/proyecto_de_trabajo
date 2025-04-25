@@ -1,0 +1,58 @@
+/*estilos generales*/
+body{background-color:aquamarine;
+    color:blue;
+    font-family: Arial, sans-serif;
+    }
+    
+    .card-container{/*contenedor de las tarjetas*/
+    display: flex;
+    justify-content: center;/*centra orizontalmente*/
+    gap: 20px;/*es el espacio entre las tarjetas*/
+    flex-wrap: wrap;/*permite que s e acomoden en pantallas chicas*/
+    padding: 20px;
+    }
+    
+
+    /*estilos para la tarjeta*/
+    .card{
+    width: 18em;
+    background-color: #181C14;
+    color:white;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out,box-shadow 0.3s ease-in-out;
+    box-shadow:0 4px 8px rgba(225,225,225,225,225,0.1);
+    }
+    
+    /*efecto hover en la tarjeta*/
+    .card:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 8px 16px rgba(225,225,225,225,225,0.2);
+    }
+    
+    /*imagen dentro de la tarjeta */
+    .card img{
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+    
+    /*boton estilizado*/
+    .card .btn{
+    background-color: #3C3D37;
+    color:white;
+    border: none;
+    transition: background 0.3s ease-in-out ;
+    
+    }
+    
+    .card .btn:hover{
+        background-color:#697565 ;
+    }
+    /*resposividad para pantallas chicas*/
+    @media(max-width:600px){
+        .card-container{
+            flex-direction: column;/*cambia a columna*/
+            align-items: center;/*centra en pantallas chicas*/
+        }
+    }

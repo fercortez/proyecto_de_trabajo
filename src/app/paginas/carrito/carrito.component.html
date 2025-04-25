@@ -1,6 +1,6 @@
 <p>carrito works!</p>
 <h1>carrito de comtra</h1>
-<div *ngIf="productosEnCarrito.lengh === 0">
+<div *ngIf="productoEncarrito.length === 0">
     <p>No hay productos en el carrito</p>
 </div>
 <table class="table">
@@ -15,11 +15,11 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let item of productosEnCarrito;let i = index">
+        <tr *ngFor="let item of productoEncarrito;let i = index">
             <td><img [src="item.producto.imagen" alt="{{item.producto.nombre}}" style="width: 50px; height: 50px;"></td>
             <td>{{item.producto.nombre}}</td>
             <td>{{item.producto.descripcion}}</td>
-            <td>{{item.producto.precio | currency}}</td>
+            <td>{{item.producto.precio}}</td>
             <td>
                 <button (click)="quitarCantidad(i)">-</button>
                 {{item.cantidad}}
@@ -33,4 +33,4 @@
     </tbody>
 
 </table>
-<button (click)="realizarComtra()" class="btn btn-success">realizarComtra</button>
+<button (click)="realizarCompra()" class="btn btn-success">realizarComtra</button>
