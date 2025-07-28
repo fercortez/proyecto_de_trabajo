@@ -1,36 +1,57 @@
-<p>carrito works!</p>
-<h1>carrito de comtra</h1>
-<div *ngIf="productoEncarrito.length === 0">
-    <p>No hay productos en el carrito</p>
+<h1 class="text-center">Carrito de Compras</h1>
+
+<div class="noProductos" *ngIf="productoEnCarrito.length === 0" class="alert alert-warning text-center"
+    style="width: 400px; height: 50px;   margin: 0 auto;">
+    <p>No hay productos en el carrito </p>
+    
 </div>
-<table class="table">
-    <thead>
-        <tr>
-            <th>imagen</th>
-            <th>nombre</th>
-            <th>descripcion</th>
-            <th>precio</th>
-            <th>cantidad</th>
-            <th>acciones</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let item of productoEncarrito;let i = index">
-            <td><img [src="item.producto.imagen" alt="{{item.producto.nombre}}" style="width: 50px; height: 50px;"></td>
-            <td>{{item.producto.nombre}}</td>
-            <td>{{item.producto.descripcion}}</td>
-            <td>{{item.producto.precio}}</td>
-            <td>
-                <button (click)="quitarCantidad(i)">-</button>
-                {{item.cantidad}}
-                <button (click)="agregarCantidad(i)">+</button>
 
-            </td>
-            <td>
-                <button (click)="eliminarProducto(item.producto.id)">eliminar</button>
-            </td>
-        </tr>
-    </tbody>
+<div class="n1diceNo"  *ngIf="productoEnCarrito.length === 0">
+    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8a394efc-d4bd-466a-aa96-0c444ab1cffb/dh32kpq-016fa1e7-226a-4462-b7fe-8090b48ac6f4.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzhhMzk0ZWZjLWQ0YmQtNDY2YS1hYTk2LTBjNDQ0YWIxY2ZmYlwvZGgzMmtwcS0wMTZmYTFlNy0yMjZhLTQ0NjItYjdmZS04MDkwYjQ4YWM2ZjQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.kSa7hIUIlB9H-fpCymizVstaxAAXFgIRak9nNrw9fqs"
+        style="width: 200px; height: 200px;   margin: 0 auto;">
+</div>
 
-</table>
-<button (click)="realizarCompra()" class="btn btn-success">realizarComtra</button>
+
+<div *ngIf="productoEnCarrito.length > 0" class="container">
+    <table class="table table-hover table-bordered align-middle text-center">
+        <thead>
+            <tr>
+                <th class="th-color">Imagen</th>
+                <th class="th-color">Nombre</th>
+                <th class="th-color">Descripcion</th>
+                <th class="th-color">Precio</th>
+                <th class="th-color">Cantidad</th>
+                <th class="th-color">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of productoEnCarrito;let i = index">
+                <td class="td-color">
+                    <img [src]="item.producto.imagen" alt="{{item.producto.nombre}}" class="img-thumbnail"
+                        style="width: 70px; height: 70px;">
+                </td>
+                <td class="td-color">{{item.producto.nombre}}</td>
+                <td class="td-color">{{item.producto.descripcion}}</td>
+                <td class="td-color">{{item.producto.precio }}</td>
+                <td class="td-color">
+                    <div class="btn-group" role="group" aria-label="Cantidad">
+                        <button class="btn btn-dark" (click)="quitarCantidad(i)">-</button>
+                        <span class="px-2">{{item.cantidad}}</span>
+                        <button class="btn btn-dark" (click)="agregarCantidad(i)">+</button>
+                    </div>
+                </td>
+                <td class="td-color">
+                    <button class="btn btn-dark" (click)="eliminarProducto(item.producto.id)">
+                        <i class="fa-solid fa-trash">Eliminar</i>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="text-end mt-4" *ngIf="productoEnCarrito.length > 0">
+        <h4 class=" fw-bold">Total : {{calcularTotal()}}</h4>
+        <button class="btn btn-dark" (click)="irAFormularioCompra()">
+            <i class="bi bi-cart-check"></i> Realizar Compra
+        </button>
+    </div>
+</div>

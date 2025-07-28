@@ -1,93 +1,76 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          
-            
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/inicio">inicio</a>
-          </li>
+<nav class="navbar navbar-expand-lg navbar-color">
+  <div class="container-fluid">
+    <!-- Logo/Brand -->
+    <a class="navbar-brand" href="#">
+      <img width="70" height="70" src="https://cdn-icons-png.flaticon.com/128/4707/4707480.png">
+    </a>
 
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/productos">productos</a>
-          </li>
+    <!-- Botón para móviles -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/ofertas">ofertas</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/contacto">contacto</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/nosotros">nosotros</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/carrito">carrito</a>
-          </li>
-
-
-
-
-
-
-          <!--
-          <li class="nav-item">
-            <a class="nav-link" routerlink="/inicio">inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerlink="/productos">productos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerlink="/ofertas">ofertas</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerlink="/contacto">contacto</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerlink="/nosotros">nosotros</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerlink="/carrito">carrito</a>
-          </li>-->
-
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" routerLink="contacto">contacto</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-          </li>
-        </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-
-        <li>
-<a routerLink="/carrito">
-<i class="bi bi-cart"></i>
-<span *ngIf="cantidadProductos > 0">
-  {{cantidadProductos}}
-</span>
- 
-</a>
-
-
-
+    <!-- Contenido colapsable -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Enlaces de navegación (izquierda) -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" href="/inicio">inicio</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/productos">productos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/ofertas">ofertas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/contacto">contacto</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/nosotros">nosotros</a>
+        </li>
+      </ul>
+
+
+
+
+      <!-- buscador  -->
+      <div class="group d-flex position-absolute start-50 translate-middle-x">
+        <svg viewBox="0 0 24 24" aria-hidden="true" class="icon">
+          <g>
+            <path
+              d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z">
+            </path>
+          </g>
+        </svg>
+        <input class="input" type="search" placeholder="Search" />
+      </div>
+
+
+
+      <!-- Íconos de carrito/favoritos (derecha) -->
+      <div class="d-flex">
+        <a routerLink="/favoritos" class="nav-link me-3">
+          <div class="position-relative">
+            <img width="30" height="30" src="https://cdn-icons-png.freepik.com/128/9694/9694614.png">
+            <span *ngIf="cantidadProductosEnFavoritos > 0"
+              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              {{cantidadProductosEnFavoritos}}
+            </span>
+          </div>
+        </a>
+
+        <a routerLink="/carrito" class="nav-link">
+          <div class="position-relative">
+            <img width="40" height="40" src="https://img.icons8.com/?size=100&id=59997&format=png&color=000000">
+            <span *ngIf="cantidadProductosEnCarrito > 0"
+              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              {{cantidadProductosEnCarrito}}
+            </span>
+          </div>
+        </a>
       </div>
     </div>
-  </nav>
+  </div>
+</nav>

@@ -1,6 +1,6 @@
 /*estilos generales*/
-body{background-color:aquamarine;
-    color:blue;
+.color-de-fondo{
+    color:black;
     font-family: Arial, sans-serif;
     }
     
@@ -57,3 +57,13 @@ body{background-color:aquamarine;
             align-items: center;/*centra en pantallas chicas*/
         }
     }
+
+    
+.carousel-inner{
+      border-radius: 50px;
+      width: 1000px;
+
+
+}
+    
+    
