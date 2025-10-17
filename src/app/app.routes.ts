@@ -7,16 +7,21 @@ import { NosotrosComponent } from './paginas/nosotros/nosotros.component';
 import { CarritoComponent } from './paginas/carrito/carrito.component';
 import { CompraComponent } from './paginas/compra/compra.component';
 import { FavoritosComponent } from './paginas/favoritos/favoritos.component';
+import { LoginComponent } from './paginas/login/login.component';
+import { RegistrarseComponent } from './paginas/registrarse/registrarse.component';
 
 export const routes: Routes = [
 
-    {path:'', redirectTo: '/inicio',pathMatch: 'full'},
-    {path: 'inicio',component: InicioComponent},
-    {path: 'contacto',component: ContactoComponent},
-    {path: 'productos',component: ProductosComponent},
-    {path: 'ofertas',component: OfertasComponent},
-    {path: 'nosotros',component: NosotrosComponent},
-    {path: 'carrito',component: CarritoComponent},
-    {path: 'compra',component: CompraComponent},
-    {path: 'favoritos',component: FavoritosComponent}
+    { path: '', redirectTo: '/inicio', pathMatch: 'full' },
+    { path: 'inicio', component: InicioComponent },
+    { path: 'contacto', component: ContactoComponent },
+    { path: 'productos', component: ProductosComponent },
+    { path: 'ofertas', component: OfertasComponent },
+    { path: 'nosotros', component: NosotrosComponent },
+    { path: 'carrito', component: CarritoComponent },
+    { path: 'compra', component: CompraComponent },
+    { path: 'favoritos', component: FavoritosComponent },
+    { path: 'login', component: LoginComponent },
+    { path: 'registrarse', component: RegistrarseComponent }
+
 ];

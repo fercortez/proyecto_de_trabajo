@@ -7,16 +7,18 @@
 
 .card {
 
-  border-radius: 20px;
+  border-radius: 10px;
   /* Esquinas redondeadas */
-  background-color: #3c0c48;
+  background-color: white;
   transition: transform 0.3s, box-shadow 0.3s;
   /* Efecto suave */
   overflow: hidden;
   /* Para que no se vea contenido que sobresale */
   width: 300px;
   /* Ancho fijo para las tarjetas */
-  border: 3px solid #3c0c48;
+  border: 3px solid white;
+  margin-top: 40px;
+  margin-bottom: 40px;
 
 }
 
@@ -44,6 +46,8 @@
 
    /*text-align: center;
    Centrar el texto */
+
+   
 }
 
 .card-title {
@@ -78,7 +82,7 @@
 .btn:hover {
   transform: scale(1.1);
   /* Aumenta ligeramente el tamaño */
-  background-color: rgb(31, 31, 134);
+  background-color: rgb(51, 51, 55);
   /* Cambia a un verde más intenso */
   color: white;
   /* Cambia el color del texto */
@@ -118,4 +122,11 @@
 
 .container input:checked ~ svg {
   fill: #ffeb49;
+}
+
+.caja-color{
+  background-color: #021526;
+  border-radius: 10px;
+  margin-left: 60px;
+ margin-right: 60px;
 }

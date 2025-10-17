@@ -1,15 +1,27 @@
+<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+
+
+<style>
+    h1.text-center {
+        font-family: 'Oswald', sans-serif;
+    }
+</style>
+
+
+
 <h1 class="text-center">Carrito de Compras</h1>
 
 <div class="noProductos" *ngIf="productoEnCarrito.length === 0" class="alert alert-warning text-center"
     style="width: 400px; height: 50px;   margin: 0 auto;">
     <p>No hay productos en el carrito </p>
-    
+
 </div>
 
-<div class="n1diceNo"  *ngIf="productoEnCarrito.length === 0">
+<div class="n1diceNo" *ngIf="productoEnCarrito.length === 0">
     <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8a394efc-d4bd-466a-aa96-0c444ab1cffb/dh32kpq-016fa1e7-226a-4462-b7fe-8090b48ac6f4.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzhhMzk0ZWZjLWQ0YmQtNDY2YS1hYTk2LTBjNDQ0YWIxY2ZmYlwvZGgzMmtwcS0wMTZmYTFlNy0yMjZhLTQ0NjItYjdmZS04MDkwYjQ4YWM2ZjQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.kSa7hIUIlB9H-fpCymizVstaxAAXFgIRak9nNrw9fqs"
-        style="width: 200px; height: 200px;   margin: 0 auto;">
+        style="width: 200px; height: 200px;   margin: 0 auto;" margin-top="30px">
 </div>
+
 
 
 <div *ngIf="productoEnCarrito.length > 0" class="container">

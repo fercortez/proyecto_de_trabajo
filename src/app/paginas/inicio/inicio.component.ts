@@ -12,50 +12,25 @@ export class InicioComponent {
     {
       id: 1,
       nombre: 'producto 1', precio: 100,
-      img: 'https://i.pinimg.com/736x/aa/77/a8/aa77a8004cbaf7acfb22fbb61ca44a74.jpg',
+      img: 'https://acdn-us.mitiendanube.com/stores/141/429/products/captura-de-pantalla-2025-07-23-17-22-52-99136f1e65f24263ef17533026258421-1024-1024.webp',
     },
 
     {
       id: 2,
       nombre: 'producto 2', precio: 150,
-      img: 'https://i.pinimg.com/736x/8a/eb/31/8aeb31f033ba256a88ae23351efdce4d.jpg',
+      img: 'https://acdn-us.mitiendanube.com/stores/141/429/products/captura-de-pantalla-2025-07-23-17-22-48-7f9c9cb2ec67140d2d17533026263866-1024-1024.webp',
     },
 
     {
       id: 3,
       nombre: 'producto 3', precio: 200,
-      img: 'https://i.pinimg.com/236x/ba/1f/e6/ba1fe662e2cd1ea9a05bc6cb6033dfa9.jpg',
+      img: 'https://http2.mlstatic.com/D_NQ_NP_2X_639505-MLA78086392441_072024-F.webp',
     },
 {
       id: 4,
       nombre: 'producto 1', precio: 100,
-      img: 'https://i.pinimg.com/736x/aa/77/a8/aa77a8004cbaf7acfb22fbb61ca44a74.jpg',
-    },
-
-    {
-      id: 5,
-      nombre: 'producto 2', precio: 150,
-      img: 'https://i.pinimg.com/736x/8a/eb/31/8aeb31f033ba256a88ae23351efdce4d.jpg',
-    },
-
-    {
-      id: 6,
-      nombre: 'producto 3', precio: 200,
-      img: 'https://i.pinimg.com/736x/a8/d9/f8/a8d9f8192302f45d2c0157ca032ad1f4.jpg',
-    },
-{
-      id: 7,
-      nombre: 'producto 2', precio: 150,
-      img: 'https://i.pinimg.com/736x/8a/eb/31/8aeb31f033ba256a88ae23351efdce4d.jpg',
-    },
-
-    {
-      id: 8,
-      nombre: 'producto 3', precio: 200,
-      img: 'https://i.pinimg.com/236x/ba/1f/e6/ba1fe662e2cd1ea9a05bc6cb6033dfa9.jpg',
-    },
-
-
+      img: 'https://http2.mlstatic.com/D_NQ_NP_2X_843661-MLA77596998624_072024-F.webp',
+    }
   ];
 
   usuario = {

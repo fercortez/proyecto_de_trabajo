@@ -1,9 +1,11 @@
-export interface Producto{
-    id:number;
-    nombre:string;
-    descripcion:string;
+export interface Producto {
+    id: number;
+    nombre: string;
+    descripcion: string;
     precio: number;
     imagen: string;
     disponibilidad: Boolean;
-    cantidad?:number;
+    cantidad?: number;
+    categoria: string;
+    marca: string;
 }

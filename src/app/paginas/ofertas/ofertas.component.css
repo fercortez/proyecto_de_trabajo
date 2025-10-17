@@ -12,14 +12,18 @@
 
   border-radius: 20px;
   /* Esquinas redondeadas */
-  background-color: #3c0c48;
+  background-color: #ffffff;
   transition: transform 0.3s, box-shadow 0.3s;
   /* Efecto suave */
   overflow: hidden;
   /* Para que no se vea contenido que sobresale */
   width: 300px;
   /* Ancho fijo para las tarjetas */
-  border: 3px solid #3c0c48;
+  border: 3px solid #ffffff;
+    margin-top: 40px;
+  margin-bottom: 40px;
+
+  
 
 }
 
@@ -126,7 +130,7 @@
 
 .tag {
   position: absolute;
-  background-color: greenyellow;
+  background-color: #FFDE63;
   color: rgb(0, 0, 0);
   left: 12px;
   top: 12px;
@@ -143,4 +147,13 @@
   /* Hacer que el precio se destaque */
    font-weight: bold;
   
+}
+
+
+
+.caja-color{
+  background-color: #021526;
+  border-radius: 10px;
+  margin-left: 60px;
+ margin-right: 60px;
 }

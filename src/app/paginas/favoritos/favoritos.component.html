@@ -1,30 +1,46 @@
 
+ <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+ 
+ 
+ <style>
+    h1.text-center {
+      font-family: 'Oswald', sans-serif;
+    }
+  </style>
+ 
+
+
+
 <h1 class="text-center ">Favoritos</h1>
 
-<div *ngIf="productosFavoritos.length === 0" class="alert alert-warning text-center" style="width: 400px; height: 50px;   margin: 0 auto;">
+<div *ngIf="productosFavoritos.length === 0" class="alert alert-warning text-center"
+  style="width: 400px; height: 50px;   margin: 0 auto;">
   No hay productos en favoritos.
 </div>
+
+
 
 <div *ngIf="productosFavoritos.length > 0" class="container">
   <table class="table table-bordered table-hover align-middle text-center">
     <thead class="table-primary">
       <tr>
         <th class="th-color">Imagen</th>
-        <th>Nombre</th>
-        <th>Descripción</th>
-        <th>Precio</th>
-        <th>Acciones</th>
+        <th class="th-color">Nombre</th>
+        <th class="th-color">Descripción</th>
+        <th class="th-color">Precio</th>
+        <th class="th-color">Acciones</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let producto of productosFavoritos">
-        <td>
-          <img [src]="producto.imagen" alt="{{ producto.nombre }}" width="80" height="80" style="object-fit: cover; border-radius: 8px;">
+        <td class="td-color">
+          <img [src]="producto.imagen" alt="{{ producto.nombre }}" width="80" height="80"
+            style="object-fit: cover; border-radius: 8px;">
         </td>
-        <td>{{ producto.nombre }}</td>
-        <td>{{ producto.descripcion }}</td>
-        <td>{{ producto.precio}}</td>
-        <td>
+        <td class="td-color">{{ producto.nombre }}</td>
+        <td class="td-color">{{ producto.descripcion }}</td>
+        <td class="td-color">{{ producto.precio}}</td>
+        <td class="td-color">
           <button class="btn btn-dark" (click)="agregarAlCarrito(producto)">
             <i class="bi bi-cart-plus"></i> Agregar
           </button>
@@ -36,5 +52,3 @@
     </tbody>
   </table>
 </div>
-
-
